@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheeKianTeoh | Password Generator</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@zxcvbn-ts/core@2.0.0/dist/zxcvbn-ts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@zxcvbn-ts/language-common@2.0.0/dist/zxcvbn-ts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@zxcvbn-ts/language-en@2.0.0/dist/zxcvbn-ts.js"></script>
+
+</head>
+
+<body>
+  <form class="js-form password-app position-adjust">
+
+    <h2 class="password__title">Password Generator</h2>
+
+    <p class="password__display">
+      <span class="password__display-text js-password__display-text">P4$5WOrD!</span>
+      <a class="js-password__copy password__copy-btn" role="button" tabindex="0">
+        <img class="password__copy-icon" src="./assets/icons/copy.svg" alt="click me to copy the password">
+      </a>
+    </p>
+
+    <section class="password__setting">
+
+      <div class="password__length-setting">
+        <label for="character_length" class="js-char_length-label">character length</label>
+        <input class="js-range" type="range" name="character_length" id="character_length" min="0" max="20" value="10">
+      </div>
+
+      <fieldset class="password__checkboxes">
+
+        <label class="form-control password__checkbox" for="uppercase">
+          <input type="checkbox" name="setting" id="uppercase" class="js-password__checkbox--uppercase" checked>
+          include uppercase letters
+        </label>
+
+        <label class="form-control password__checkbox" for="lowercase">
+          <input type="checkbox" name="setting" id="lowercase" class="js-password__checkbox--lowercase">
+          include lowercase letters
+        </label>
+
+        <label class="form-control password__checkbox" for="number">
+          <input type="checkbox" name="setting" id="number" class="js-password__checkbox--number" checked>
+          include number letters
+        </label>
+
+        <label class="form-control password__checkbox" for="symbol">
+          <input type="checkbox" name="setting" id="symbol" class="js-password__checkbox--symbol">
+          include symbol letters
+        </label>
+
+      </fieldset>
+
+      <div class="password__strength">
+        <span class="password__strength-label js-password__strength-label">strength</span>
+        <div class="password__strength-bars js-password__strength-bars" data-strength="0">
+          <div class="password__strength-bar"></div>
+          <div class="password__strength-bar"></div>
+          <div class="password__strength-bar"></div>
+          <div class="password__strength-bar"></div>
+        </div>
+      </div>
+
+      <button class="password__button js-password__button" type="submit">Generate</button>
+
+    </section>
+  </form>
+
+  <div class="password-app__copy-message js-copy-message">
+    <span>Copied!</span>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+
+</html>

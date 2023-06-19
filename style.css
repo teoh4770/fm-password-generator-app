@@ -1,0 +1,511 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+
+:root {
+  /* Colors */
+  --black: #18171f;
+  --grey: #817d92;
+  --light-white: #e6e5ea;
+  --light-black: #24232c;
+  --backgroud-black: #08070b;
+
+  --red: #f64a4a;
+  --orange: #fb7c58;
+  --yellow: #f8cd65;
+  --green: #a4ffaf;
+
+  /* Typography */
+  --font-32px: 2rem;
+  --font-24px: 1.5rem;
+  --font-18px: 1.125rem;
+  --font-16px: 1rem;
+  --line-height-42px: 2.625rem;
+  --line-height-32px: 2rem;
+  --line-height-24px: 1.5rem;
+  --line-height-21px: 1.313rem;
+
+  --font-family-variable: "Open Sans", sans-serif;
+  --font-weight-700: 700;
+}
+
+/*
+  Josh Comeau CSS Reset 
+*/
+
+/* 
+  1. Use a more intuitive box-sizing model
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.333;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 
+  9. list
+*/
+ul {
+  list-style-type: none;
+  padding: unset;
+}
+
+/* 
+  10. clickable object
+*/
+button {
+  cursor: pointer;
+}
+
+/* 
+  11. svg
+*/
+svg {
+  stroke: currentColor;
+}
+
+/* 
+  12. link
+*/
+
+a {
+  /* Typography */
+  text-decoration: none;
+  /* Colors */
+  color: inherit;
+  cursor: pointer;
+}
+
+/* 
+  13. range input restyle
+*/
+input[type="range"] {
+  --color-var: var(--black);
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* 
+style the track 
+- webkit: chrome, safari, opera and edge
+- moz: firefox
+*/
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--color-var);
+  height: 0.5rem;
+  border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-track {
+  background: var(--color-var);
+  height: 8px;
+  border-radius: 5px;
+}
+
+/* 
+style the thumb 
+- webkit: chrome, safari, opera and edge
+- moz: firefox
+*/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  aspect-ratio: 1;
+  background-color: var(--light-white);
+  margin-top: -6px;
+  border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb {
+  border: none;
+  border-radius: 0;
+  width: 20px;
+  aspect-ratio: 1;
+  background-color: var(--light-white);
+  border-radius: 50%;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]:focus::-webkit-slider-thumb {
+  border: 1px solid var(--color-var);
+  outline: max(2px, 0.15em) solid var(--light-white);
+  outline-offset: max(2px, 0.15em);
+}
+
+/******** Firefox ********/
+input[type="range"]:focus::-moz-range-thumb {
+  border: 1px solid var(--color-var);
+  outline: 3px solid var(--light-white);
+  outline-offset: 0.15em;
+}
+
+/* 
+  14. checkbox
+
+Our solution will accomplish the following goals:
+
+- Scale with the font-size provided to the label
+- Gain the same color as provided to the label for ease of theme-ability
+- Achieve a consistent, cross-browser design style, including :focus state
+- Maintain keyboard and color contrast accessibility
+*/
+.form-control {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1em auto;
+
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.1;
+  cursor: pointer;
+}
+
+.form-control + .form-control {
+  margin-top: 1em;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* Not removed via appearance */
+  margin: 0;
+  color: currentcolor;
+  width: 1.15em;
+  aspect-ratio: 1;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  /* This is the quickest way to align the :before to the horizontal and vertical center of our custom control. */
+  display: grid;
+  place-content: center;
+}
+
+/* https://moderncss.dev/pure-css-custom-checkbox-style/ */
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  aspect-ratio: 1;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em currentColor;
+  /* creating a checkmark with clip path */
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+/*
+  end of css reset
+*/
+
+/* 
+  Start styling here 
+*/
+
+body {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background-color: var(--backgroud-black);
+  color: var(--light-white);
+  font-size: var(--font-16px);
+  font-family: var(--font-family-variable);
+  font-weight: 700;
+  overflow-x: hidden;
+}
+
+@media screen and (width >= 375px) {
+  body {
+    padding: 1.5rem;
+  }
+}
+
+.password-app {
+  width: 100%;
+  max-width: 400px;
+}
+
+.password-app.position-adjust {
+  position: relative;
+  top: -20px;
+}
+
+.password__title,
+.password__strength-label {
+  color: var(--grey);
+}
+
+.password__display,
+.password__setting {
+  background-color: var(--light-black);
+}
+
+.password__title {
+  margin-bottom: 1em;
+  font-size: clamp(22px, 6vw, 24px);
+  text-align: center;
+}
+
+.password__display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.password__display-text {
+  font-size: var(--font-24px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--light-white);
+}
+
+.password__display-text.no-password {
+  color: var(--grey);
+}
+
+.password__copy-btn {
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.5;
+  outline: none;
+}
+
+.password__copy-btn.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.password__copy-btn.active:focus {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+.password__setting {
+  text-transform: capitalize;
+  padding: 1.25rem 1rem 1.5rem;
+}
+
+.password__setting > * + * {
+  margin-top: 1.5rem;
+}
+
+.password__length-setting {
+  display: grid;
+}
+
+.password__length-setting label {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-16px);
+  margin-bottom: 0.75rem;
+}
+
+.password__length-setting label::after {
+  content: attr(data-content);
+  font-size: var(--font-24px);
+  margin-left: auto;
+  color: var(--green);
+}
+
+.password__checkboxes {
+  border: none;
+  padding-left: 0;
+}
+.password__checkbox {
+  width: fit-content;
+}
+
+.password__strength {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--black);
+  text-transform: uppercase;
+}
+
+.password__strength-bars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.password__strength-bars::before {
+  content: attr(data-content);
+  margin-right: 5px;
+}
+
+.password__strength-bars > * {
+  width: 10px;
+  height: 1.5rem;
+  border: 2px solid var(--light-white);
+  margin: 1px;
+}
+
+.password__strength-bars[data-strength="0"] > *.active {
+  background-color: var(--red);
+  border: none;
+}
+
+.password__strength-bars[data-strength="1"] > *.active {
+  background-color: var(--orange);
+  border: none;
+}
+
+.password__strength-bars[data-strength="2"] > *.active {
+  background-color: var(--yellow);
+  border: none;
+}
+
+.password__strength-bars[data-strength="3"] > *.active,
+.password__strength-bars[data-strength="4"] > *.active {
+  background-color: var(--green);
+  border: none;
+}
+
+.password__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+  width: 100%;
+
+  text-transform: uppercase;
+
+  background-color: var(--green);
+  border: transparent;
+}
+
+.password__button::after {
+  content: url(./assets/icons/arrow-right.svg);
+}
+
+.password__button:disabled {
+  background-color: var(--grey);
+  color: rgba(16, 16, 16, 0.5);
+  cursor: pointer;
+  user-select: none;
+  pointer-events: none;
+  outline: none;
+}
+
+.password__button:disabled::after {
+  content: "";
+}
+
+.password__button:hover,
+.password__button:active {
+  --color-var: var(--green);
+  background-color: transparent;
+  color: var(--color-var);
+  outline: 2px solid var(--color-var);
+  outline-offset: -2px;
+}
+
+.password__button:hover::after,
+.password__button:active::after {
+  content: url(./assets/icons/arrow-right-active.svg);
+}
+
+.password__strength,
+.password__button {
+  padding: 1rem;
+}
+
+.password-app__copy-message {
+  position: fixed;
+  right: 1.5em;
+  top: 0;
+  padding: 1em 1.5em;
+  border: 1px solid var(--green);
+  border-top: none;
+  color: var(--green);
+  border-radius: 0 0 5px 5px;
+  transform: translateY(-150%);
+  transition: transform 100ms ease-in-out;
+  box-shadow: 0 3px 10px -2px var(--green);
+}
+
+.password-app__copy-message.active {
+  transform: translateY(0);
+  transition: transform 250ms ease-in-out;
+}

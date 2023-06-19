@@ -1,0 +1,8 @@
+{
+  "name": "password-generator-app",
+  "version": "1.0.0",
+  "description": "Frontend mentor challenge - app that generating the password",
+  "main": "app.js",
+  "author": "",
+  "license": "ISC"
+}
