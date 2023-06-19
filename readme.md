@@ -71,6 +71,7 @@ Live Site URL: [https://teoh4770.github.io/fm-password-generator/](https://teoh4
 
 - [Navigator: clipboard property](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clipboard)
 - My own note on 'this' binding
+- [Browserify: bundle the dependencies that's unreach for browser](https://browserify.org/)
 
 ## Author
 
