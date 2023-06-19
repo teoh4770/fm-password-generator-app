@@ -20,16 +20,17 @@ Live Site URL: [https://teoh4770.github.io/fm-password-generator/](https://teoh4
 
 **Mobile View**
 
-![Screenshot 2023-06-15 at 9 34 18 PM](https://github.com/teoh4770/fm-password-generator/assets/98545971/07c037bd-b8db-4a08-97b0-ba0172c26d9b)
+![Screenshot 2023-06-15 at 9 34 18 PM](https://github.com/teoh4770/fm-password-generator-app/assets/98545971/c3a929ac-fb74-489a-a641-4277876b59de)
 
 **Desktop view**
 
-![Screenshot 2023-06-15 at 9 34 49 PM](https://github.com/teoh4770/fm-password-generator/assets/98545971/aef9d3ab-5f1c-435a-b433-206e3a186b05)
+![Screenshot 2023-06-15 at 7 01 19 PM](https://github.com/teoh4770/fm-password-generator-app/assets/98545971/de173de1-318c-4750-ba4b-4a062a5f385f)
+
 
 ### Links
 
-- Solution URL: [https://github.com/teoh4770/fm-password-generator](https://github.com/teoh4770/fm-password-generator)
-- Live Site URL: [https://teoh4770.github.io/fm-password-generator/](https://teoh4770.github.io/fm-password-generator/)
+- Solution URL: (https://github.com/teoh4770/fm-password-generator-app)[https://github.com/teoh4770/fm-password-generator-app]
+- Live Site URL: (https://teoh4770.github.io/fm-password-generator-app/)[https://teoh4770.github.io/fm-password-generator-app/]
 
 ## My process
 
