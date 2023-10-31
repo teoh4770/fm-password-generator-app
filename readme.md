@@ -1,6 +1,6 @@
 # Frontend Mentor - Password Generator App
 
-Live Site URL: [https://teoh4770.github.io/fm-password-generator/](https://teoh4770.github.io/fm-password-generator/)
+Live Site URL: [https://teoh4770.github.io/fm-password-generator/](https://teoh4770.github.io/fm-password-generator/)](https://teoh4770.github.io/fm-password-generator-app/)
 
 ## Table of contents
 
